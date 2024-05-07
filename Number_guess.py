@@ -12,6 +12,7 @@ x=random.randint(lower,upper)
 #Printing the number of guess according to users input 
 print("\n\tYou've only",round(math.log(upper-lower+1,2)),"chances to guess the integer")
 
+#Initialize the count as 0
 count=0
 
 #Loop 
