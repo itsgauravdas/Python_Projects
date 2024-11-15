@@ -1,0 +1,2110 @@
+man
+pyspark
+https://youtu.be/FiGLvQTsfC8?si=BIGnOu8SINl3HGjP
+Video Link: https://youtu.be/lqYSCSgFefM?si=XBkRfN_hWdGHrnqA
+
+
+*****hostnamectl ---to check the os
+user@name=welcome2023
+pass: Gauravdas@20
+
+username=test1
+password: test1234
+
+username=test2
+password: test12345
+
+username=gauavdas
+password: gauravdas
+
+
+
+********creat alias of a path
+alias py='cd /home/welcome2023/python'
+****************
+To check any package or service status
+service nginx status
+******************************
+To start any service 
+service nginx start
+
+
+
+man cat ---man is to open the dictionary
+Note: When defining variable then no need to add '$' but when print or use then use '$'
+--------Introduction-------------------------
+1. Unix is an operating System.
+2. User communicates with kernel through a program known as the shell 
+3. The shell is a command line interpreter
+4. To change password
+-------------Changing password 
+passwd Enter
+old password: Type your old password Enter
+Type new password Enter
+Done
+-------------------To show the date 
+date enter
+--------------------To show the calender 
+cal enter
+-------------------install ,update ,check version
+
+To install  any package
+command:
+sudo apt install package_name 
+
+To update or system
+command:
+ sudo apt update 
+
+to check version 
+command:
+lsb_release -a
+
+
+
+5. ls=list
+6. ls -ltr *promo* (Search all file which has this promo in it)
+7. To know the User
+whoami
+8.For logout
+a. logout
+b. Halt
+c. init 0
+d. init 6
+e. poweroff
+d. Reboot
+e. shutdown
+
+----------File Management-------------------
+All data in Unix organized into file
+All files are organize into Directories
+All directories are organized into a tree like structure caled filesystem
+3 Basic type of files are there:
+1. Ordinary File(text,image)
+2. Directories(c)
+3. Specific File(hard drive)
+
+To filnd file 
+ls -ltr ch*.doc (The files charts with ch and ends with .dom will be filtered out from a dir )
+
+----------Vi Editor-------------
+vi file_name enter
+Then press the I key to go to the edi mode
+[Type or store your file..
+......]
+Press ESC button to get out from the insert mode 
+Press shift+ Z+Z to get out from the file 
+------------Edit File-----------
+vi file name 
+press shift+i
+
+edit the file 
+
+press ESC button 
+Press shift +z +z
+-------Displaying the content within the file ------
+cat filename --It will display the content in thst file 
+
+cat -b filename ---To seee the content with line numbers
+
+-----Total number of line and word ----
+wc filename
+Example:
+
+2 8 44 filename
+2=number of line
+8=number of words 
+44= total number of bytes
+
+------Copy file-------------
+cp source_filename destination_filename
+
+-----Moving file--------------
+
+mv filename path (move file one path to another path)
+mv oldfilename newfilename(move file from old to new file name )
+
+------Deleting file---------
+rm filename (to delete one file)
+rm file1 file2 file3 (to delete multiple file )
+
+--------------3rd video(Directory)
+
+ 1. ls (to show all dir)
+2. cd - (to go to the last dir)
+3. cd name (to open the folder)
+4. dir (to open the dir)
+
+------Absolute path 
+
+/---is used to specify the path 
+Example : C:\Users\gaurav.c.das\Desktop\Accenture\Unix
+
+------present working dir
+pwd (current working dir)
+
+----Listing dir 
+ls dirname (listing out the files present in current dir)
+
+----------Create dir 
+
+mkdir dirname (to create the dir)
+mkdir linux/dirname(to create dir in linus path)
+
+------Remove dir
+rmdir dirname (to remove dir )
+ls (to show the all dir )
+--------------- insert into dir 
+cd dirname (then we are into the dir )
+cd -(to go back)
+ 
+-----------------Renaming dir 
+mv olddirname newdirname
+
+
+----------4th_video(File Permissions)
+
+1. Ownere permission
+2. Group permission
+3. Other permission
+
+-rwxr-wx-
+first three characters(2-4)
+second three characters(5-7)
+Last Three Characters(8-10)
+
+1. Read
+2. Write
+3. Execute
+----------Change Permission
+sym
+chomd [options][u/g/o/a..][-+=][permission] File name
+u=owner
+g=member of the group
+o=all other the users
+a=all users
+r=read
+w=write
+x=execute
+
+chmod o-x dirname ---To remove execute from other
+
+
+---------Video_5(Environment)
+ Simply put, environment variables are variables that are set up in your shell when you log in. They are called “environment variables” because most of them affect the way your Unix shell works for you. One points to your home directory and another to your history file.
+
+when we declare variable that time no need to use $ but at the time of use we have to use $
+
+echo is  to print the output
+
+Terminal:
+$Term=vt100
+
+Path:
+$Path=/bin/user/don/...
+---------------------Small_tip-------------
+$ps1='=' enter
+=ps1
+--------------ESC sequence-------------------------
+\t =current time(HH::MM::SS)
+\d=Current date,expressed as weekday month date
+\n=newline
+\W(cap)=workig dir
+\w(Small)=full path of working dir 
+\u=current user name
+----------------------
+ $ ps2='[\u\w]' Enter
+[user name]
+-----------------
+
+
+----------------Video_6(pipes & filters in unix)------------
+
+
+Pipe: output of one program is a output of another program
+ 
+grep command:like operator in sql -----
+grep 'Hello' .sh* (Here we are searching hello in all .sh folders)
+
+ls -ltr | grep "doc" ---it will find the files wich include this .doc in its name 
+
+ls -ltr |grep -n "doc" ----(-n) is to show the line number
+ls -ltr | grep -v "doc" --search for the file which not contain doc
+
+--------------Sort command--------------
+
+
+sort filename --all the data will sort the items
+
+-n sort numerically
+-r reverse
+-f sort upper and lower together
++x ignore first x fields when shorting 
+
+sort -r filename
+
+------------pg and more command(filter)----
+ls -ltr |grep "doc" |sort -n| more
+more or pg command stop the screen when the screen is full of text
+
+---------Video_7(vi_editor)--------------
+press ESC ----to go to the command mode or get out from the editor 
+vi flowname enter
+vi -r filename ------open the file read only mode 
+view filename -----open the file read only mode
+shift+i ---For insert or edit mode 
+:q!---exit without saving the changes 
+:wq ----save and exit 
+press zz to save and exit from the editor (another way)
+
+
+--------video_8-------------
+A shell scripting is a computer program which is designed to be executed by unix/linux shell and has many types such as 
+Bonurne shell
+c shell
+korn shell
+GNU Bourne-Again shell 
+Shell is an environment in which we can run our command,programs and shell scripts.
+command prompt
+command script
+
+
+#Execution of shell script
+./scriptname.sh
+or
+sh scriptname.sh
+
+----------------video_9
+---------------Variable
+name="Gaurav"--Creating Variable
+-----Creating script
+ vi name enter
+shift+i
+
+name ="Gaurav Das"
+
+ESC
+:wq enter
+
+------Give the executable permission
+  
+chmod +x script.sh enter
+
+-----Execute
+
+./scriptname.sh
+
+------Variable type:
+local,environment,shell variable
+
+----Read only variable
+a=10
+readonly a 
+-------Unsetteing Variable(Deleting Variable)
+b="shell"
+unset
+Note: We can not unset a readonly variable 
+
+-----------------video 10
+---------Array
+vi color enter
+shift+i
+
+fruits[0]="Apples"
+fruits[0]="Oranges"
+fruits[0]="Berries"
+echo "print 1st elements:${fruits[1]}" ---to print only one element
+echo "print 1st elements:${fruits[*]}" ---to print all the element of array 
+ESC
+:wq enter
+-----Execution of array
+
+chmod +x color.sh ---give the executable permission 
+./color.sh ----For execution of the script 
+ 
+
+-----------------------Video 11
+-----------------------Operators
+1. Arithmetic
+2. Relational
+3. Boolean
+4. String
+5. File Test Operator 
+
+1. Arithmetic 
+
+a=10
+b=20
+val=expr $a+$b
+echo "a+b:$val"
+
+2. Relation 
+-eq = equal to
+-ne = not equal to 
+-gt=greater than
+-lt=less than
+-ge= greater than equal to
+-le=less than equal to
+
+
+if [$a -eq $b]
+then
+echo "Not equal"
+else
+echo "Equal"
+
+3. Boolean
+!=false
+-o=or
+-a=and 
+
+4. String
+=,!=,-z=is not true,-n=is not false
+str is not false
+
+5. File Test
+-b=check the file is bloch special
+-c=check the file is cahracter special
+-d=check the file is a directory
+-f= check the files is an ordinary file as opposed to a directory
+-g=check if files has its set group id(SGID) bit set
+.....
+..
+..
+---------------------video_12 
+------if-else(Decision Making )
+
+nano demo
+
+a=10
+b=20
+
+if [$a==$b]
+then
+echo 'Hello'
+elif [$a -gt $b]
+fi  ---To end the if statement 
+
+chmod +x demo ---give execution permission set
+./demo or sh demo   run
+
+-------video 13
+--------------Loop Type 
+1. while 
+2. For
+3. Until
+4. Select
+
+1. while 
+ 
+while [$a -le 10]   -----(-le) less tahn equal to 
+do 
+ echo 'Hello'
+ a= expr $a+1
+
+
+cmod 777 filename -----giving read,write and execution permission to the user
+
+2. For loop:
+
+for var in 0 1 2 3 
+do 
+echo 'Hii'
+done 
+
+3. until loop:
+ a=0
+until [! $a -lt 11]
+do 
+ echo $a
+a= expr $a+1
+done
+
+4. select loop:
+
+it is useful when you need to ask the user to choose one or more item from
+a list of choices .
+
+
+select var in word1 word2 ....wordn
+do
+statement
+done 
+
+
+-------video 14
+----- loop control
+1. Break statement
+2. Continue Statement
+
+
+-------Video 15
+------Substitution
+The shell performs substitution when it encounters an expression that contains one or more special characters.
+
+Example:
+#!/bin/sh
+a=10
+echo -e "Value of a is $a\n"
+
+
+\n nwe line
+\a alert
+...
+
+command substitution:
+Command substitution is the mechanism by which the shell performs a given set of commands and then substitute their output in the place of the commands.
+
+Example
+Date='date'
+echo "Date  is $Date"
+
+Variable substitution:
+Variable substitution enables the shell programmer to manipuate the value of a variable of a variable based on its state.
+
+${var:-apple}:
+apple set as the value of var 
+
+${var}: substitute the value of var
+${var:word}: if var is null or unset, word is sunstituted for var. The value of var does not change 
+
+${var:=word}
+if var is null or unset, var is set to the value of the word 
+
+${var:?message}:
+if a var is null or unset, message is printed to standard error, just to check var is set correctly
+
+${var:+word}:
+if var is set, word is subsituted for var 
+
+----------video 16
+------- quoting mechanisms
+
+Unix Shell provides various metacharacters which have special meaning while using them in any Shell Script and causes termination of a word unless quoted. 
+?[]'"\$;&()|^<> 
+
+example:
+echo 'Hello\; World'
+Hello; World ---\ , ignore the special charecter
+
+1. Single Quotes:
+
+echo '<!@&000>'
+
+<!@&000> ----here no need to use \ to ignore the special character
+
+
+2. Double Quotes:
+
+var=adam
+
+echo '$var <1567>'
+$var <1567>
+
+echo "$var <1567>"
+adam $var <1567>
+
+3. Back Quotes
+
+putting any shell command in between backquotes executes the command 
+
+Date='date'
+echo "Current Date: $date"
+
+
+-------------Video 17
+-------------Input/Output
+
+Output Redirection:
+$ who > Users
+note:
+You can use >> operator to append the output in na existing file 
+
+ls enter
+
+ls >list   ---All the file inside the list will be stored in that list file 
+
+cat list 
+
+echo apple>list ---all content of list will be replaced by apple
+
+apple
+
+echo orange>>list ---orange value willl added with apple
+
+cat list enter
+apple
+orange 
+
+
+Input Redirection:
+  '<' :-for input 
+
+wc -l < list  ---(wc = word count)it will return the total number of lines in list
+2
+
+
+-----------------Video 18
+----------------- Manpage help
+
+all unix commands come with a number of optional and mandetory options
+unix version of help files are called man pages.
+
+man commad 
+
+example :
+man ls --- you can get complete details on man command of thst ls 
+
+Man pages section:
+1. name
+2. synopsis
+3. description
+4. options
+5. see also
+6. bugs
+7. Examples
+8. Authors 
+
+----------video 19
+-----------Functions
+A function is a block of code that is reusable and performs certain operations.
+
+nano demo.sh
+
+hello(){
+echo "Hello $1 $2"
+}
+hello adham john 
+
+chmod 777 demo.sh 
+
+./demo.sh
+
+hello adham john 
+
+
+--return valur from the function
+hello(){
+echo "Hello $1 $2"
+return 10
+}
+hello adham john 
+
+ret =$?  ---save the return value 
+
+echo "Return value is $ret"
+
+
+-------video 20 
+------sed command in linux/unix 
+The SED command in Linux stands for Stream EDitor and is helpful for a myriad of frequently needed operations in text files and streams.
+
+Replace or substituting 
+
+sed command replaces the word "Apple" with "Cherry" in the text file 
+sed 's/Apple/Cherry' apple.txt
+
+---------------------------------------------
+sed 's/Apple/Cherry/1' apple.txt
+s=substitution
+1=place where to change
+-------------------------------------------------
+
+
+cat apple.txt
+Apple is a sweet and delicious .....
+
+sed 'Apple/Cherry/' apple.txt  --it will replace the apple to cherry 
+
+----Replacing unsing specific line number
+sed '3 s/Apple/Cherry/' apple.txt ---replace at line nunber 3 
+sed 's/Apple/Cherry/3' apple.txt ---replace at line nunber 3 
+
+-----Duplicating the replaced line with p flag 
+
+
+sed 's/delicious/nutritious/p' apple.txt ---- it will replace the delicious with nutritious and print the line line twice 
+
+
+----Delete a perticular line 
+
+sed '1/2/3nd' filename.txt ---to delete the perticular line 
+sed '$d' filename.txt ----to delete the last line 
+sed 'x,yd' filename.txt---to delete from x to y range 
+sed 'nth,$d' filename.txt --to delete nth to last line 
+sed '/pattern/d' filename.txt ---the delete pattern matching line 
+
+--------------Video 11
+----------File system 
+ls /dev ---it will open that dev directory 
+
+cat dir --open the dir
+cp dirname --open  copy the dir
+cp file1 file2 --copy file1 to file2
+file filename---identify the file name
+find filename dir ---find  a file/dir
+head filename  ---show the beginning of the file 
+leass filename ---Browses throwgh a file from the end or the beginning
+ls dirname ---show the content of dir 
+more filename ---open the file in non editable mode from the beginning 
+mv file1 file2 ---move file1 to file2 
+mv filename path ---move this file to this path
+tail filename ---show the end of the file
+touch filename --creates a blank file or modifies an existing file or its attributes
+whereis filename ---show the location of a file 
+which filename ----shows the location of the file is it in your path or not 
+
+-------Check the storage that is consumed by all in the disk 
+dk -k enter (df=disk free )
+
+------to check the disk usage 
+
+du -h
+du -h/etc ---to check the disk is currently taking how mush space to run 
+
+
+
+-------------------Video 22
+--------------- User Administration
+
+1. Root account,super user who has all the previlages
+2. System account
+3. User accounts,interactive or limited access
+
+User administration files :
+
+1./etc/passwd only the root account access
+2.etc/shadow increpted password for a pertocular account (all systems are not supported )
+3.etc/group(group information )
+4.etc/gshdow(Secure group information )
+
+useradd --add accounts
+usermod modify
+userdel delete the user
+groupadd add groups 
+groupmod modify the groups attributes
+groupdel removes the group 
+-g GID --numerical value of the group id 
+-o the option permits to add group with out unique GID
+-f just exit the success group 
+groupname actual group name to be created
+
+groupname -n new_name old_name ---modify the name 
+useradd -d homedir -g groupname -m-s shell -u userid accountname
+
+
+-d homedir specify the home dir for the account
+-g groupname specify the group account for the account
+-m create the home dir if does not exists
+-s shell specify the default shell for this account 
+-u userid specify the user is=d for this account 
+accountname actual account name to be created 
+
+
+usermod -d/home/mcmohd20-m-l mcmohd20   modify the account
+userdel -r mcmohd20 delete the account 
+
+
+Shortcut:
+
+1. touch filename --Create a new empty file or update the timestamp of a existing file
+2. cat --concatenate and display file
+3. man ---to check the command( press q to quit)
+man ls
+4. htop --to view process viewer and system monitor( press q to quit)
+5. chmod 777 filename ---this is used to give th permission
+6.  sudo apt update ---to update the package dir 
+7. sudo apt install apache2 (to install)
+sd apt list --upgradable (to check the upgradable dir)
+8. ls -lart
+9. ls -ltr *..* to find something
+10. chown ---add group 
+11. tar compress.tar file1 filw2 (compress file1 and file2 and create compress.tar) 
+12. gzip filename.gz file name it will create a filename.gz
+13.gunzip filename it will unzip the filename.gz file 
+zip filename.zip
+unzip filename.zip
+14. scp filename servername:location (copy file from one server to another)
+15. ping google.com (to check the network com=nnectivity)
+16. ifconfig
+17. netstat --to check the internet stat
+18. route --view or configure network routing table
+19. top--display system resource usage same as htop
+20.ps --to see the current running processes
+21. kill pid (top)
+22. systemctl stop/restart/start servicename
+23. useradd username --to add a new user
+24. passwd --to change the password
+25. su username ---to switch user
+26. uptime diaplay system uptime 
+27. ifconfig
+ display disk storage
+28. du diaplay disk usage
+29. mount
+30. unmount
+31. date 
+32. whoami 
+33.finger username ---to check the user information
+34. which python ---location of the program
+35. uname ---to check the os
+36. history --to check the history , to clear the history---> history-c 
+37. ls | tee file.txt ---it will take all the ls output as input and fill it in file.txt
+38. locate filename ---location of the file 
+39. sort  filename ---sort any content in a file
+40.uniq filename ---to search uniq values in the file
+41.haed/tail 
+head filename ---head of the file
+tail filename --tail of the file
+ 42. free -m to check he overll storage 
+43. lscpu  --o check the architecture 
+44. cat /etc/os-release ---to check the os version 
+
+45. sudo -i --to login as root user 
+46. apt-get update ---to update the os 
+or 
+sudo apt-get install/update (apt-get is for new version)
+as root user:
+apt-get install package_name -y 
+
+47. dpkg --list  --to check the versions are present in 
+or 
+apt list 
+48. support you want to add one line in index.html file
+echo "Hello world"> index.html
+ 49. apt list --upgradable to check the upgradable apps
+50. tty ----to check the standard input from where liny=us is getting input 
+
+51 . sudo sync; echo 1 > /proc/sys/vm/drop_caches
+To clear the cache but only root user has the access 
+-------------------------------------------------------------------------
+-------------Shell scripting by Gaurav Sharma---------------------------
+Part 1:
+linux is a kernel
+Hardware--kernal-->shell-->application or user (GUI=Graphical user interphase OR CLI: command line interphase)
+so kernel directly connect with hardware so kernel command to the hardware 
+to perform any task, ans shell is intermediate between kernel and application.
+Suppose we are opening any folder that time 
+application layer call shell then shell call kernel and kernel call hardware to open ths older.
+1. uname ---print os
+2. uname --a(print all the details of our machine)
+3. man uname ---to check the uname 
+
+4. hostname ---to check the host
+5.  whoami ---to check the user 
+6. sudo -1(to get the root access or became a root user)
+7. tty-- print the file name of the terminal connected to standard input
+8. users ---print the user names of users currently logged in to the current host
+--------------------------------------------
+part 2:-
+1. adduser username enter (to create new user and to create new user we need root access)
+ Then create a password for the user and enter the details
+Enter the new value, or press ENTER for the default
+        Full Name []: test
+        Room Number []: test
+        Work Phone []: test
+        Home Phone []: test
+        Other []: test
+Is the information correct? [Y/n] Y
+
+to switch between users
+2. su username 
+3. id --it will give you all the user information as which user you logged in 
+Here gid is real group and 'groups' is effective group
+4. id -u (print uid), id -g (gid=real group), id -G (effective groups)
+5. groups ---it will print all the group names of the current user
+6. test2@LAPTOP-3489K5S2:/home/welcome2023$ sudo whoami
+[sudo] password for test2:
+test2 is not in the sudoers file.  This incident will be reported.
+as test2 has not sudo permission
+7. exit to exit from current user
+8. sudo usermod -a -G groupname username[-a append, -G(to add the user in relative groups)] 
+Here we are adding one user into a group called sudo from the user who has already added in that group 
+ 9. sudo whoami(as test1 user has sudo group asscess then it can use sudo command)
+10. sudo addgroup gropname ---to create a group 
+11. sudo usermod -g groupname username --to add one user into a real group (g)
+12. delgroup groupname ---to delete the group
+13. deluser username --to delete user
+********14.useradd is a system command ,adduser is wriiten using purl language and adduser is internally using useradd command
+useradd will not ask you the password of the user while creating its simply create the user
+
+14. From root user you can change any other user password 
+sudo passwd username 
+
+------------------------------------------------------------------
+part 3:
+1. date ---show the current date 
+2. date --date 20191112  ---it will show us the week of the day of that date 
+3. sudo date -s 2019-12-12 12:30:00[-s=set, here we are chaning the date ]
+4. cal to see he calendar
+5. cal 2019 [it will give us the all calendar of 2019]
+6. cal 1 2019 [1=jan 2019 calendar]
+7. echo "Gaurav" it will print Gaurav
+8. echo -e "Gaurav\tDas" as we are adding a \t so we need to use -e 
+9. echo -e "\033[0;36m Gaurav" -- to change the color (font color)
+10. echo -e "\033[0;44m Gaurav" [Backgrouund color]
+11. pwd --present working directory
+12. touch dummy1.txt [it will create a dummy1.txt in pwd]
+13. cd dirname --to change the dir 
+14. cd ../cd ~ to go to the parent dir 
+cd - to go to the dir from where you came back 
+15. touch filename [it will change the file modified date to todays date]
+16. bc --basic calculator ctrl+d for exit 
+-----------------
+part:4 
+1. touch .dummy.txt to make it as hidden file
+2. touch -a  0927023718 filename [09=Month,27=date,02:37=time,18=year]
+******touch -a -t [[CC]YY]MMDDhhmm[.ss] filename
+3. head filename [it will show the head of the dir] or head -3 filename [first 3 lines]
+4. tail -10 filename [last 10 lines]
+********************5. tail -f filename [if lively monitor the logs suppose you have a app which will acces by many people frequently so you can monitor your log]
+6. more filename [to open the file]
+7. less file name [here you can user up and down arrow to navigate]
+8. wc to count the word count
+9. cut -f 2 filename [cut this portion of the filename][-f=field,-d=delimiter]
+
+***********************************************************
+John Doe 35
+Jane Smith 28
+Bob Johnson 40
+gauravdas@LAPTOP-3489K5S2:~$ cut -f 2 -d ' ' text1.sh [field=2, delimiter =' ']
+Doe
+Smith
+Johnson
+
+
+
+
+
+**********************************************************
+10. cut -f 2 -d '.' filename[-d=delimiter]
+cut -f 2,5 -d '.' filename[-d=delimiter]
+11. file filename [it will show the file information]
+12. who it will give the current user information
+13. sort filename to sort the file content
+14. sort -o result file1 file2 [merging file1 and file2 in result] -o=flag
+
+-----------------------------
+Part: 5  
+
+1. cat enter (concatenate files and print on the standard output)
+then it will start taking input 
+welcome2023@LAPTOP-3489K5S2:~$ cat
+Gaurav
+Gaurav
+Das
+Das
+...
+...
+2.. note ctrl+d 
+welcome2023@LAPTOP-3489K5S2:~$ cat
+t(press ctrl+d)t
+
+3. cat > std_out.txt (Here we are changing the output file of the system)
+what ever we'll type as input it will store it in std_out.txt file
+
+
+4. cat filename (is to read the file)
+or
+cat<filename 
+
+5. > statdard input
+< standard output
+
+6. ls --list all the values
+ls -c list values by time 
+ls>ls_out.txt (all the list values will be saved in ls_out.txt)
+7. man ls >man_ls.txt [we are storing manual of ls in man_is.txt folder]
+8. cat <man_ls.txt>new_man_ls.out (copying content of man_ls to new_man_ls file )
+******9. #0->std input
+#1-> std output
+#2 -> std error
+****************************************
+welcome2023@LAPTOP-3489K5S2:~$ lss 2>error.txt
+welcome2023@LAPTOP-3489K5S2:~$ cat error.txt
+Command 'lss' not found, but there are 15 similar ones.
+welcome2023@LAPTOP-3489K5S2:~$
+
+10. cat >> filename [ >> = append operator it will append the content whatever you'll type]
+11. ls >output.txt 2>error.txt [all ls content went to output.txt and if there is any error it'll store at error.txt ]
+
+12. 
+welcome2023@LAPTOP-3489K5S2:~$ lsss 2>&1 output.txt
+Command 'lsss' not found, did you mean:
+  command 'lsns' from deb util-linux (2.37.2-4ubuntu3.4)
+  command 'lssu' from deb nilfs-tools (2.2.8-1)
+  command 'less' from deb less (590-1ubuntu0.22.04.3)
+Try: sudo apt install <deb name>
+welcome2023@LAPTOP-3489K5S2:~$ ls >> output.txt >&1 [&1 =output.txt]
+
+
+13. sort :
+welcome2023@LAPTOP-3489K5S2:~$ sort
+hi
+i
+am
+ctrl+d
+am
+hi
+i
+
+
+......................
+welcome2023@LAPTOP-3489K5S2:~$ sort test
+
+1
+15
+2
+5
+51
+6
+89
+...................................
+welcome2023@LAPTOP-3489K5S2:~$ sort - test
+10
+-7
+ctrl+d
+-7
+1
+10
+15
+2
+5
+51
+6
+89
+welcome2023@LAPTOP-3489K5S2:~$
+14. cat file1 faile 2 [to concate both file]
+15. pipe: like pipeing kojnt one pipe's output is input for another pipe
+ls | fort
+
+16. 
+tee  -  read  from  standard input and write to standard output and
+       files
+who | tee who1.txt>>who.txt
+
+18. lsblk --to show the storage disks attached with the server  
+******19. suppouse you forgot to add sudo in your last command then 
+sudo !! ---it will trigger your last executed command with sudo command 
+
+
+*******************************************************
+Part: 6
+1. pwd ---present workig directory
+2. mkdir test ---create test directory
+3. mkdir -p test1/test2 ----create the text1 and inside the test11 it will create test2
+4. mkdir test1/test2/{a/{1,2,3},b/{4,5,6}}
+5. rmdir ---remove dir
+6. rm -r filename/rm filename
+7. rm -rvf filenames[1,2,3,4,5] [-rvf will not ask you to are you want to delete , it eill delete simply]
+8. ls
+9. ls -ltr
+*********************************************************
+part: 7
+1. man ln --- make links between files
+2. ln -s /tmp/ ~/my_sort [creating a sortcut in home[~] dir of emp dir ]
+3. cp file1 file2
+4. mv from to 
+******************************************************
+part: 8
+
+1. whami--to print
+2. u -user
+g-group
+0-others
+a-all
+r-read
+w-write
+x-execute
+chmod g+r who.txt [here we are giving permission to the group to read]
+chmod go+r who.txt [group and other to read permission]
+chmod 777 filename [all permission]
+
+
+*************************************************************
+part: 9
+1. 4- setuid
+2-setgid
+1-sticky
+2. cat /etc/shadow ---stored in users creds
+welcome2023:$y$j9T$5t3ioIIxM38nhXaBtJNba.$S1e3KbZjSiA0Zz0OpveTjEhjWYy/6qqrUNSK9Hy56a6:19868:0:99999:7:::
+here password is in hash form so we can't decrypt it 
+3. which ls [to see where the ls command is stored in our system]
+*********************************************************
+part: 10
+1.umask 444 [this 444 will get sudstracted rom the other ilders like 777-444=333]
+mkdir f1
+touch f1.txt
+2.
+-rw-r--r-- 1 welcome2023 welcome2023          42 Oct 26 19:34 who.txt
+for thr above filr who.txt the owner is welcome2020
+no we want to change the owner 
+chown text1 who.txt [owner welcome2023 to test1]
+ chgrp text1 who.txt[change group welcome2023 to text1]
+***********************************************************
+part: 11
+1. suppose you have a dvd no to see the data of the dvd you need to create a
+folder and mount the dvd content into the cd 
+
+welcome2023@LAPTOP-3489K5S2:~$ ls /dev/sda*
+/dev/sda ---this is the storage devide of this system
+
+suppose we have a storage disk 
+to access the data 
+first create a dir 
+ mkdir mnt
+mount diskname mnt
+cd mnt/
+ls --to see the content of the device
+
+2. to check mnt is a mount point or not 
+mountpoint mnt 
+mnt/ is a mountpoint
+
+3. To unmount the folder 
+unmount mnt/
+
+4. du ---disk use (-h =human redable)
+5. du -ha ---to check the files 
+6. df  -h [df - report file system disk space usage,mount etails]
+
+7. lsblk [list block devices]
+8.fdisk  -l all stotage device info[]
+
+**************************************************
+part: 12
+1.  gzip filename [to compress and make a gunzip file .gz]
+-rw-r--r-- 1 welcome2023 welcome2023   72 Oct 18 14:02 std_out.txt.gz
+
+2. to un gunzip 
+gunzip filename.g2
+-rw-r--r-- 1 welcome2023 welcome2023   42 Oct 18 14:02 std_out.txt
+
+3. more compress
+bzip2 filename 
+-rw-r--r-- 1 welcome2023 welcome2023          77 Oct 18 14:02 std_out.txt.bz2
+
+4. bunzip2 filename.dz2
+
+5. zip folder [.zip /compress the folfer]
+or
+zip -r folder name[zip the folders recursively] 
+6. unzip folder.zip
+
+7. zip -r zipfolder foldername [make foldername to zipfolder.zip]
+ 
+8. tar -zcvf text.tar.gz  tmp
+-rw-r--r-- 1 welcome2023 welcome2023         117 Oct 27 21:22 text.tar.gz
+
+9. tar -zxvf text.tar.gz
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+------------------------------------Unix Shell scripting---------------------------------
+
+1. to check the shells are present in your Linux 
+
+welcome2023@LAPTOP-3489K5S2:~$ cat /etc/shells
+# /etc/shells: valid login shells
+/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/usr/bin/sh
+/bin/dash
+/usr/bin/dash
+/usr/bin/tmux
+/usr/bin/screen
+
+2. To run the script as bash script 
+add #!/bin/bash like below 
+nan firts.sh
+
+#!/bin/bash [#!--shebang]
+echo "Hello world"
+echo "This is our first shell script"
+ls
+pwd
+cal
+
+---------------------------------------
+Part: 5
+
+1. #!/usr/bin/python3
+for i in range(1,11):
+        print(i)
+file name py.sh
+to execute this python scripy
+python3 py.sh
+
+==========To check the type 
+2. welcome2023@LAPTOP-3489K5S2:~$ type -a uptime
+uptime is /usr/bin/uptime
+uptime is /bin/uptime
+
+
+welcome2023@LAPTOP-3489K5S2:~$ type -a echo
+echo is a shell builtin
+echo is /usr/bin/echo
+echo is /bin/echo
+
+
+welcome2023@LAPTOP-3489K5S2:~$ type -a pwd
+pwd is a shell builtin
+pwd is /usr/bin/pwd
+pwd is /bin/pwd
+
+***suppose echo is a built in command so it will not check further but if is not a builtin command it'll check in the all paths 
+welcome2023@LAPTOP-3489K5S2:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/oracle19c/db_home/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/GAURAV DAS/AppData/Local/Programs/Python/Python312/Scripts:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/MySQL/MySQL Server 8.0/bin:/mnt/c/Program Files/Java/jdk-22/bin:/mnt/c/Program Files/Hadoop/bin:/mnt/c/Program Files/spark/bin:/mnt/c/Users/GAURAV DAS/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/GAURAV DAS/AppData/Local/Programs/Python/Python312/:/mnt/c/Program Files/spark/bin:/mnt/c/Program Files/JetBrains/PyCharm 2024.1.4/bin:/mnt/c/Users/GAURAV DAS/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+
+**Builtin functions are fast that other command
+
+---------------------------------------------
+part: 6
+
+
+1. To check the color of the statement 
+nano color.sh
+
+#!/bin/bash
+echo "This is our first program"
+echo -e "\033[0;31m Fail message here"
+echo -e "\033[0;32m success message here"
+
+
+------------------------------------------------------
+part: 7
+
+1. to comment anything 
+#commnt here 
+2. to print it in one line use backslash('\')
+echo "hi\
+i\
+am\
+someone"
+
+output:
+hi i am someone
+
+3.  to install multiple packages at once 
+sudo apt-get install ngnix \
+tomcat9 \
+mysq-server
+ 
+4. Strong quote
+echo "hi\
+i\
+am\
+someone"
+instead of " if we use ' the \ will not make any difference
+output ('):
+ hi\
+i\
+am\
+someone
+output ("):
+hi i am someone
+
+5. Horizontal tab
+
+echo -e "Hi \t I \t am \t Someone"
+welcome2023@LAPTOP-3489K5S2:~$ echo -e "Hi \t I \t am \t Someone"
+Hi       I       am      Someone
+
+
+vertical tab
+echo -e "Hi \v I \v am \v Someone"
+
+welcome2023@LAPTOP-3489K5S2:~$ echo -e "Hi \v I \v am \v Someone"
+Hi
+    I
+       am
+           Someone
+
+--------------------------------------------------------
+part: 8
+1. a user define variable b. system define variable 
+
+#User define variables
+#!/bin/bash
+name="Gaurav"
+age="30"
+
+echo $name
+echo $age
+
+or
+
+#!/bin/bash
+name="Gaurav"
+age="30"
+
+echo ${name}
+echo ${age}
+
+or 
+
+#User define variables
+#!/bin/bash
+name="Gaurav"
+age="30"
+work="Program"
+echo $name
+echo $age
+echo "I am ${work}ing"
+
+output:
+Gaurav
+30
+I am Programing-----imp 
+--------------------------------------------------
+part: 9
+user define variable 
+-------------------------------------------------
+part: 9
+System define variables (Default Variables )
+1. type 
+env ---to get the system variable variables 
+
+welcome2023@LAPTOP-3489K5S2:~$ echo ${HOME}
+/home/welcome2023
+
+Parent process id 
+welcome2023@LAPTOP-3489K5S2:~$ echo ${PPID}
+352
+process id
+welcome2023@LAPTOP-3489K5S2:~$ echo ${$}
+353
+User id :Every user g=has its personal user id 
+welcome2023@LAPTOP-3489K5S2:~$ echo ${UID}
+1000
+
+to check the system define variable s
+man bash
+
+---------------------------------------------------------
+pat: 10
+
+1. env --to check the system define variable 
+2. welcome2023@LAPTOP-3489K5S2:~$ echo ${SHELL}
+/bin/bash
+
+welcome2023@LAPTOP-3489K5S2:~$ echo ${OSTYPE}
+linux-gnu
+
+----------------------------------------------------------
+part: 11
+
+read name (Taking input from user)
+
+echo "Hello ${name} Good Morning!"
+
+Suppose you forgot to add a variable after read then the input will tore in ${REPLAY VARIABLE}
+
+read 
+
+echo ${REPLAY}
+
+echo "Hello ${name} Good Morning!"
+
+#------To add user message 
+
+read -p "Please enter your name " name 
+
+echo "Hello ${name} Good Morning!"
+
+#--------Input password
+
+read -p "Please enter your password" -s  pass
+
+#--Here s=Secure 
+As my version of Linux doesn't support  -s
+then here we are first disabling the echo commad and then taking password input 
+------------------------------------------------------------
+--------------------------------------------------------
+****************Input password*******************************
+# Turn off echo to hide password input
+echo "Please enter your password: "
+stty -echo
+read pass
+stty echo 
+echo # Move to a new line after password input
+
+----------------------------------------------------------------------
+Part : 12 
+
+******Command line arguments
+#!/bin/bash
+
+name="gaurav"
+age="30"
+
+echo ${0} #Command line 1
+echo ${1} #command line 2
+echo ${2} #command line 3
+echo "${name}:${age}"
+
+input 
+./commandlienarg.sh hi 70
+output:
+hi
+70
+gaurav:30
+
+---------------------------------------------------
+part: 13 
+
+Suppose 
+nano input.sh
+echo $12
+input 
+sh input,sh 10
+output 
+12
+to get the exact output we need to use 
+echo {$12}
+
+-------------------------------------------
+part : 14
+Assign command output into script
+
+#!/bin/bash
+pwd
+#CURRENT_WORKING_DIR="pwd"
+#OR
+#CURRENT_WORKING_DIR=`pwd`
+#OR
+CURRENT_WORKING_DIR=$(pwd)
+echo "${CURRENR_WORKING_DIR}"
+
+1. Date format
+welcome2023@LAPTOP-3489K5S2:~$ date +"%D-%T"
+11/02/24-10:53:58
+
+
+#!/bin/bash
+pwd
+#CURRENT_WORKING_DIR="pwd"
+#OR
+#CURRENT_WORKING_DIR=`pwd`
+#OR
+CURRENT_WORKING_DIR=$(pwd)
+echo "${CURRENR_WORKING_DIR}"
+
+date_time=$(date +"%D-%T")
+echo "${date_time}"
+
+
+---------------------------------------
+Part: 15
+#-----Read only variable 
+
+#!/bin/bash
+readonly name="HTML" # To nmake the variable read only
+name="Ram" # As name is readonly variable we can not update or overwrite the value
+echo "${name}"
+
+welcome2023@LAPTOP-3489K5S2:~$ sh -x readonlyvar.sh
++ readonly name=HTML
+readonlyvar.sh: 4: name: is read only
+
+---------------------------------------------
+part: 16
+#-------UPPER & LOWER
+
+#-------------For older version
+#!/bin/bash
+
+string="my_name_is_gaurav"
+
+#Upper
+echo "${string^}"
+echo "${string^^}"
+
+#Lower
+echo "${string,}"
+echo "${string,,}"
+
+
+#-----------------------New vesion
+#!/bin/sh
+
+string="my_name_is_gaurav"
+
+# Convert entire string to uppercase
+echo "$(echo "$string" | tr '[:lower:]' '[:upper:]')"
+
+# Convert entire string to lowercase
+echo "$(echo "$string" | tr '[:upper:]' '[:lower:]')"
+
+
+
+---------------------------------------------------------------------------
+part : 17
+
+
+1. Store variable data into 
+code : 
+read -p " Please enter your name " name
+echo "Hello ${name}"
+output:
+Please enter your name Gaurav
+Hello Gaurav
+
+2. 
+   Please enter your name " name
+echo "Hello ${name:-world}"
+in this case if the user doesn't put any input by default it will take world as input and print it 
+  Please enter your name
+Hello world
+
+3. yourname =${undefibe:Manish}
+if the variable is not set 
+
+---------------------------------------------------------
+part 19
+
+1.
+welcome2023@LAPTOP-3489K5S2:~$ help :
+:: :
+    Null command.
+
+    No effect; the command does nothing.
+
+    Exit Status:
+    Always succeeds.
+
+2. 
+
+welcome2023@LAPTOP-3489K5S2:~$ ${textvar:?errorrr}
+-bash: textvar: errorrr
+
+as textvar is not set
+
+3. To check user is passing command line argument as output 
+
+#name="Gaurav"
+
+: ${1:? Please pass CLI}
+
+echo "I am here"
+
+
+
+Ourput :
+
+
+welcome2023@LAPTOP-3489K5S2:~$ ./demo.txt  [Without any arguments]
+./demo.txt: line 3: 1:  Please pass CLI
+welcome2023@LAPTOP-3489K5S2:~$ ./demo.txt gaurav
+I am here
+welcome2023@LAPTOP-3489K5S2:~$
+
+
+----------------------------------------------
+part 20
+***Arithmetic operator 
+
+b=20
+echo "$((a+b))"
+
+output :
+welcome2023@LAPTOP-3489K5S2:~$ ./hi
+30
+----------------------------------------function----
+part 21
+
+*****function
+welcome2023@LAPTOP-3489K5S2:~$ cat -b fun.sh
+     1  function install(){
+     2          echo "Hello i am a function"
+     3  }
+     4  function install2(){
+     5          echo "Hello I am function 2"
+     6  }
+     7  install1
+     8  install2
+welcome2023@LAPTOP-3489K5S2:~$ nano fun.sh
+welcome2023@LAPTOP-3489K5S2:~$ ./fun.sh
+Hello i am a function
+Hello I am function 2
+
+--To run from the 2nd function
+
+welcome2023@LAPTOP-3489K5S2:~$ Hello i am a function
+Hello I am function 2
+^C
+[1]+  Done 
+
+--------------------------------------------------
+part: 22
+
+
+function install1(){
+        echo "Hello i am a function"
+}
+function install2(){
+        echo "Hello I am function 2"
+}
+function deploy(){
+        install2
+        echo "Hello i am deploy"
+}
+install1
+install2
+deploy
+
+--ouput
+welcome2023@LAPTOP-3489K5S2:~$ ./fun.sh
+Hello i am a function
+Hello I am function 2
+Hello I am function 2
+Hello i am deploy
+
+-----------------------------------------
+part: 23 
+
+pas arg in functions
+
+function install1(){
+        echo "Hello i am a function ${1}"
+}
+function install2(){
+        echo "Hello I am function 2 ${1}"
+}
+function deploy(){
+        install2
+        echo "Hello i am deploy ${1}"
+}
+install1 "ngnix"
+install2 "ngnix"
+deploy   "webapp"
+
+---output 
+welcome2023@LAPTOP-3489K5S2:~$ ./fun.sh
+Hello i am a function ngnix
+Hello I am function 2 ngnix
+Hello I am function 2
+Hello i am deploy webapp
+
+---------------------
+to print the function name there is a system define variable
+${FUNCNAME}
+
+
+function install1(){
+        echo "Hello i am a function ${1}"
+}
+function install2(){
+        echo "Hello I am function 2 ${1}"
+}
+function deploy(){
+        install2
+        echo "Hello i am deploy ${1}"
+        echo " executing function ${FUNCNAME}"
+}
+install1 "ngnix"
+install2 "ngnix"
+deploy   "webapp"
+
+-------------------------------------------
+part: 24
+#Here we are changing the value of a global variable 
+packname="ngnix"
+function install1(){
+        echo "Hello i am a function ${1}"
+        echo "${packname}"
+}
+function install2(){
+        packnae="tomcat"
+        echo "Hello I am function 2 ${1}"
+        echo "${packname}"
+}
+function deploy(){
+        install2
+        echo "Hello i am deploy ${1}"
+        echo " executing function ${FUNCNAME}"
+}
+----------------------------------------------------------
+
+part : 25 
+
+1. 
+to check the command is right or not 
+echo $?
+output: 0 
+Then the previous command is right
+
+then 
+welcome2023@LAPTOP-3489K5S2:~$ vrebfd, [not a valid command]
+vrebfd,: command not found
+welcome2023@LAPTOP-3489K5S2:~$ echo $?
+127 [comman is not zero so the previous command is not right]
+
+2.
+test - check file types and compare values
+
+welcome2023@LAPTOP-3489K5S2:~$ a=5
+welcome2023@LAPTOP-3489K5S2:~$ test $a -eq 5
+welcome2023@LAPTOP-3489K5S2:~$ echo $?
+0 
+--------------------------------------------------------------
+Part : 26
+
+if else
+
+1. 
+#!/bin/bash
+
+if echo "Hello World">/dev/null [Here we are sending the output into infinity]
+then
+        echo "Echo command executed successfully"
+fi
+echo "I am Here"
+
+-----------------------------------------------------------
+
+part : 27 
+[] --alias of test command () 
+
+#!/bin/bash
+
+read number
+if [ $number -eq 5 ]
+then
+    echo "Number is equal to 5"
+fi
+if [ $number -lt 5 ]
+then
+    echo "less than 5"
+fi
+if [ $number -gt 5 ]
+then
+    echo "Number is greater than 5"
+fi
+
+----------------------------------------------------
+part : 28
+
+[[]] ---advance version of test and []
+
+#!/bin/bash
+
+read number
+if [[ $number -eq 5 ]]
+then
+    echo "Number is equal to 5"
+fi
+if [[ $number -lt 5 ]]
+then
+    echo "less than 5"
+fi
+if [[ $number -gt 5 ]]
+then
+    echo "Number is greater than 5"
+fi
+
+-------------------
+------------------
+#!/bin/bash
+
+read number
+if [[ -n $number  ]]
+then
+    echo "Non zero"
+fi
+if [[ -z $number ]]
+then
+    echo "Zero"
+fi
+------------------------------------------
+
+--------------------------------
+part : 29 
+
+File comparison
+
+
+man test [you will get all thing there ]
+-------
+
+#!/bin/bash
+
+path="/home"
+
+if [ -d ${path} ]
+then
+        echo "is a dir "
+fi
+
+
+------------------------------
+file="/home/welcome2023/hello.sh"
+if [ -r $file ]
+then
+        echo "Have read permission"
+fi
+if [ -w $file ]
+then
+        echo "Have write permission"
+fi
+if [ - x $file ]
+then
+        echo "Execute permission:
+fi
+
+----------------------------------
+--------------------------------------------------------
+part: 30
+
+Not operator----------------
+#!/bin/bash
+name="Gaurav"
+other="Gaurav"
+
+if [[ !${name} == ${other} ]]
+then
+echo "both are same"
+fi
+
+---------------------------------------------------
+Part: 31
+AND Operator
+
+1.  ls && echo "Hello World" (Both should success)
+2. hostnamectl ---to check the os
+
+---------------------------
+part 32
+OR Operator 
+1. welcome2023@LAPTOP-3489K5S2:~$ echo "Hello" || ls
+Hello
+
+if [[ ${OS_TYPE} == "Linux" || ! ${UID} -eq 0 ]]
+then
+echo "Hello"
+fi
+-----------------------------------------------------
+welcome2023@LAPTOP-3489K5S2:~$ ping -c 1 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=58 time=125 ms
+
+--- 8.8.8.8 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 125.427/125.427/125.427/0.000 ms
+------------------------------------------
+
+Part 33/34
+
+if-else
+
+1 .
+name="Ram"
+if [[ ${name} == "Ram" ]]
+then
+echo "Hello"
+else
+echo "Hi"
+fi
+
+-----------------------------------------
+part 35
+
+elif ----
+
+read name
+if [[ ${name} == "Ram" ]]
+then
+echo "Ram"
+elif [[ ${name} == "Sham" ]]
+then
+echo "Sham"
+else
+echo "Hi"
+fi
+
+----------------------
+read -p "Enter the value : " name
+if [[ ${name} == "Ram" ]]
+then
+echo "Ram"
+elif [[ ${name} == "Sham" ]]
+then
+echo "Sham"
+else
+echo "Hi"
+fi
+
+---------------------------------
+part 36
+Case----
+action=${1}
+#Strat ,stop ,restart, reload
+
+case ${action} in
+start)
+echo "Strat"
+;;
+stop)
+echo "Stop"
+;;
+reload)
+echo "reload"
+;;
+restart)
+echo "restart"
+
+outout :
+welcome2023@LAPTOP-3489K5S2:~$ ./ifelse stop
+Stop
+
+-------------------------------------------
+part : 37 
+
+case--
+
+action=${1}
+#Strat ,stop ,restart, reload
+
+case ${action} in
+start | START | [Y] )
+echo "Strat"
+;;
+stop | STOP | [Yy] )
+echo "Stop"
+;;
+reload | RELOAD | [r] )
+echo "reload"
+;;
+restart)
+echo "restart"
+
+output :
+welcome2023@LAPTOP-3489K5S2:~$ ./ifelse r
+reload
+-----------------------------------
+part 38
+
+while loop ------------------
+
+
+while [[ $answer == "Yes" ]]
+do
+        echo "Please enter"
+done
+
+-------------------------------------------------
+part : 39
+
+while loop to read a file 
+
+#!/bin/bash
+
+echo -e "My name is Gaurav \n Sourav" | while read line [It will write each and every line of the file ]
+do
+        echo "Printing Line --> ${line}"
+done
+
+output :
+
+welcome2023@LAPTOP-3489K5S2:~$ ./while_loop.sh
+Printing Line --> My name is Gaurav
+Printing Line --> Sourav
+
+------------------------
+#!/bin/bash
+#its reading the below file /bin/passwd
+cat /bin/passwd | while read line
+do
+        echo "Printing Line --> ${line}"
+done
+
+or 
+
+#!/bin/bash
+
+cat  while read line
+do
+        echo "Printing Line --> ${line}"
+done < /bin/passwd 
+
+-----------------------------------
+#!/bin/bash
+
+cat /bin/passwd | while read line
+do
+        echo "Printing Line --> ${line}"
+        sleep 0.5
+done
+
+
+------------------------------------
+until loop
+
+#!/bin/bash
+
+read -p "Please enter a number" number
+
+initNumber = 1
+
+until [[ initNumber -eq 10 ]]
+do
+        echo $((initNumber * number))
+        ((initNumber++))
+done
+
+output:
+
+--------------------------------
+part: 40 
+
+For loop -----
+
+#!/bin/bash
+
+for v in {1..10}
+do
+        echo "${v}"
+done
+
+or 
+
+#!/bin/bash
+
+for v in "Gaurav Sharma" "Ankit Joshi" "Rajkumar Meena"
+do
+        echo "${v}"
+done
+
+
+---------------------------------------------------------
+#!/bin/bash
+
+for i in $(ls -ltr *.py*)
+do
+        echo "${i}"
+done
+---Listing all the .py files 
+
+
+--------------------------------------
+part 41 
+
+Difference $@ and $*
+
+#!/bin/bash
+
+for i in "$*"
+do
+        echo "${i}"
+done
+
+for i in "$@"
+do
+        echo "${i}"
+done
+
+outout :
+welcome2023@LAPTOP-3489K5S2:~$ ./for.sh gaurav sourav amit ankit
+gaurav sourav amit ankit
+gaurav
+sourav
+amit
+ankit
+
+
+-----------------
+To Read a file
+for i in $(cat hi.txt)
+do
+echo $i
+sleep 0.2
+done
+
+output:
+welcome2023@LAPTOP-3489K5S2:~$ ./readfile.sh
+Hi
+i
+AM
+IRONMAN
+AND
+I
+AM
+INEVITABLE
+
+
+
+-------------------------------------------------------------
+part 42
+
+Break-----
+
+for i in {1..10}
+do
+        echo "$i"
+        if [[ $i -eq 5 ]]
+        then
+                break;
+        fi
+done
+
+
+-------------------------------------------
+
+part : 43 
+
+continue 
+
+for I in {1..10}
+do
+        echo "$i"
+        if [[ $i -eq 5 ]]
+        then
+                continue
+        fi
+        echo "Hello"
+done
+-----------------------
+part: 44
+nested
+---------------------------
+part 45
+
+select statement-----------------------
+#!/bin/bash
+
+select os in linux windows mac
+do
+        echo "You select ${os}"
+done
+
+output :
+
+welcome2023@LAPTOP-3489K5S2:~$ ./select.sh
+1) linux
+2) windows
+3) mac
+#? 1
+You select Linux
+......
+....
+
+----------------------------------
+part 46 
+
+
+set -x debug mode 
+set -e [if there is any error it will exit the code automatically ]
+
+
+set -x
+lines ....
+.....
+set +x 
+
+[Debug this section only]
+
+
+
+
