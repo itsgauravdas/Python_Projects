@@ -12,7 +12,7 @@ connection=oracledb.connect(
 )
 
 #Create cursor
-cursor=connection.cursor()
+cursor=connection.cursor() 
 
 data=requests.get('https://www.google.co.in/')
 links=bs4.BeautifulSoup(data.text, 'html.parser')
