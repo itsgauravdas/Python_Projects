@@ -9,7 +9,7 @@ def convert_audio_to_text():
         audio= r.listen(source, timeout=5, phrase_time_limit=10)
         
     try:
-        # Use the recognizer to convert audio to text 
+        # # # Use the recognizer to convert audio to text 
         # Covert audio to text using Goog;e speech Recognition service
         
         text = r .recognize_google(audio)
