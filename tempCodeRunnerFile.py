@@ -1,1 +1,1 @@
-textFilename
+scoreLabel
