@@ -1,0 +1,16 @@
+from cryptography.fernet import Fernet
+
+# Generate a key
+key = Fernet.generate_key()
+
+# Initialize a Fernet cipher with the key
+cipher = Fernet(key)
+
+# Encrypt some data
+data = b"Hello, World!"
+encrypted_data = cipher.encrypt(data)
+print(f"Encrypted: {encrypted_data}")
+
+# Decrypt the encrypted data
+decrypted_data = cipher.decrypt(encrypted_data)
+print(f"Decrypted: {decrypted_data.decode()}")
