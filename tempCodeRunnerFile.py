@@ -1,1 +1,1 @@
-duplicate
+translated_text
